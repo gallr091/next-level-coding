@@ -1,3 +1,4 @@
+//i followed a youtube tutorial to figure out most of this and i followed along and tried to understand the process. i still had a hard time and couldn't grasp this entirely
 const cards = document.querySelectorAll(".card");
 
 let matchedCard = 0;
@@ -6,7 +7,7 @@ let disableDeck = false;
 
 function flipCard(e) {
     let clickedCard = e.target; //getting user clicked card
-    if(clickedCard !== cardOne && !disableDeck) {
+    if(clickedCard !== cardOne && !disableDeck) { //this part confused me
         clickedCard.classList.add("flip");
         if(!cardOne) {
         //return the cardOne value to clickedCard
@@ -48,7 +49,7 @@ setTimeout(() => {
 }, 1200);
 }
 
-function shuffleCard(){
+function shuffleCard(){ //this part confused me
     let matchedCard = 0;
     cardOne = cardTwo = "";
     disableDeck = false;
