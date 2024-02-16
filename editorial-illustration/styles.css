@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    height: 800px;
+    background-color: #addfff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    position:relative;
+    z-index: -2;
+}
+
+#road{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 0;
+}
+
+
+#graph{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: -1;
+}
+
+
+#car1{
+    position:relative;
+    z-index: 0;
+    animation: Drive 5s;
+}
+
+#car2{
+    position:absolute;
+    z-index: 0;
+    /* animation: Drive 5s; */
+    visibility:hidden;
+}
+
+#car3{
+    position:absolute;
+    z-index: 0;
+    /* animation: Drive 5s; */
+    visibility:hidden;
+}
+
+#car4{
+    position:absolute;
+    z-index: 0;
+    /* animation: Drive 5s; */
+    visibility:hidden;
+}
+
+
+@keyframes Drive {
+  0% { transform: translateX(-100%) translateY(32.5%); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+#road{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 0;
+}
+
