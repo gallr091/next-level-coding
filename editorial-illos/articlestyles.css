@@ -89,6 +89,15 @@ font-style: normal;
     font-style: italic;
     color:grey;
     padding-top:10px;
+    text-decoration:none;
+}
+
+.caption a{
+    text-decoration:none;
+}
+
+.caption a:hover{
+    color: lightgray;
 }
 
 
