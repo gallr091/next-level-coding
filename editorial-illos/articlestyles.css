@@ -1,0 +1,304 @@
+/* TOP */
+.header {
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    padding-top: 10px; 
+  }
+  
+  .header img {
+    height: 2rem;
+  }
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    padding:10px;
+    border-bottom: 1px solid lightgray;
+  }
+  
+nav a {
+    font-family: 'franklin-gothic-atf', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size:0.8em;
+    color:black;
+  }
+  
+nav a:hover {
+    color: gray;
+  }
+
+
+/* !!!HEADLINE!!! */
+
+.headline {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between; 
+}
+
+.title-block {
+    flex: 1; 
+    margin-right: 2rem; 
+    margin-left: 2vw; 
+    padding-top: 10vw;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1{
+    font-family: 'bodoni-urw', serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size:3rem;
+    line-height: 1;
+}
+
+#opinion{
+    color: #956422;
+}
+
+#divider{
+    font-family: 'bodoni-urw', serif;
+font-weight: 300;
+font-style: normal;
+}
+
+.author{
+    font-family: 'franklin-gothic-atf', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.date{
+    color: gray;
+}
+
+.caption{
+    font-family: 'franklin-gothic-atf', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color:grey;
+    padding-top:10px;
+}
+
+
+/* ILLUSTRATION */
+.container {
+    width: 800px;
+    height: 800px;
+    background-color: #9fb2f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    position:relative;
+    z-index: -3;
+}
+
+#road{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 2;
+}
+
+.screen1{
+  width: 550px;
+  height:200px;
+  background-color: lightgray;
+  position: absolute;
+  z-index: -2;
+  bottom:62%;
+  left:17%;
+}
+
+.screen2{
+  width:420px;
+  height:100px;
+  background-color: lightgray;
+  position:absolute;
+  z-index: -2;
+  bottom:80%;
+}
+
+
+#car1{
+    position:absolute;
+    z-index: 1;
+    visibility: visible;
+}
+
+#car2, #car3, #car4 {
+    position:absolute;
+    z-index: 1;
+    visibility:hidden;
+}
+
+@keyframes drive {
+  0% { transform: translateX(-100%) translateY(32.5%); }
+  100% { transform: translateX(0) translateY(0); visibility: visible;}
+}
+
+@keyframes driveOut {
+    from{visibility:visible;}
+    to { transform: translateX(900px) translateY(-21%); visibility: hidden;   }
+  }
+
+  canvas {
+    width: 800px;
+    height: 800px;
+    /* border: 2px solid black; */
+  }
+  
+  /* button {
+    display: block;
+  }
+  
+  p {
+    color: white;
+  } */
+  
+  #chartContainer{
+    /* scale:20%; */
+    background-color:#addfff; 
+    z-index:-10;
+    left:50px;
+    display:none;
+  }
+
+  #controller{
+    position:absolute;
+    z-index:0;
+    opacity:100%;
+    filter: saturate(70%);
+  }
+
+  #graph{
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: -2;
+}
+
+.st1{fill:none;stroke:#ee2736;stroke-width:10;stroke-miterlimit:10;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;}
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+#chart1{
+  width:570px;
+  position:absolute;
+  z-index:-1;
+  top:2%;
+  display: none;
+}
+
+.st-2{
+    fill: none;
+    stroke: #412760;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;}
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+#chart-2{
+  width:555px;
+  position:absolute;
+  z-index:-1;
+  top:9%;
+  left:25%;
+  display:none;
+}
+
+.st-3 {
+  fill: none;
+  stroke: yellow;
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#chart-3{
+  width:500px;
+  position:absolute;
+  z-index:-1;
+  top:10%;
+  left:20%;
+  display:none;
+}
+
+.st-4 {
+    fill: none;
+    stroke: white;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear forwards;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  #chart-4{
+    width:580px;
+    position:absolute;
+    z-index:-1;
+    top:8%;
+    display:none;
+  }
+
+
+  /* ARTICLE */
+  .article-container {
+    max-width: 50vw; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    padding-top:5vw;
+
+}
+
+.article-text {
+    font-size: 1.5vw; 
+    line-height: 1.5; 
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:200;
+}
+
+
