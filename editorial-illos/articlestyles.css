@@ -94,6 +94,7 @@ font-style: normal;
 
 .caption a{
     text-decoration:none;
+    color:grey;
 }
 
 .caption a:hover{
