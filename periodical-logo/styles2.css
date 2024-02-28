@@ -1,0 +1,14 @@
+body{
+    height:200vw;
+    background:#121212;
+    }
+    
+    svg{
+    position:fixed;
+    top:10%;
+    left:30%;
+    transition:all 0.35s;
+    width:40rem;
+    fill:#fff;
+     }
+      
